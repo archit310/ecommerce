@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+         <title>BookStore</title>
+		 <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity=  "sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"></script>
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css">
+		 <link rel="stylesheet" href="css/style.css"/>
+		 <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+		 <script src="javascript/contact.js"></script>
+     </head>
+     <body>
+		     <nav class="navbar navbar-inverse">
+                 <div class="container-fluid">
+                     <div class="navbar-header">
+                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>                        
+                         </button>
+                         <a class="navbar-brand" href="#">THEBOOKSTORE</a>
+                     </div>
+                     <div class="collapse navbar-collapse" id="myNavbar">
+                         <ul class="nav navbar-nav">
+                             <li><a href="index.html">Home</a></li>
+                             <li><a href="shop.php">Store</a></li>
+                             <li><a href="about.html">About Us</a></li>
+							 <li class="active"><a href="contact.html">Contact us</a></li>
+                         </ul>
+                         <ul class="nav navbar-nav navbar-right">
+                             <li><a href="#" data-toggle="modal" data-target="#popUpWindow"><span class="glyphicon glyphicon-user"></span> Login/SignUp</a></li>
+                             <li><a href="view_cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                     </ul>
+                     </div>
+                 </div>
+             </nav>
+			 <!-- Login/SignUp Modal -->
+			 <div class="modal fade" id="popUpWindow">
+                 <div class="modal-dialog">
+                     <div class="modal-content">
+                         <!-- header -->
+                         <div class="modal-header">
+                             <button type="button" class="close" data-dismiss="modal">&times;</button>
+                             <ul class="nav nav-tabs">
+                                 <li class="active"><a data-toggle="tab" onclick="myfunction1()" href="#login">Login</a></li>
+                                 <li><a data-toggle="tab"  onclick="myfunction()" href="#signup">SignUp</a></li>
+                             </ul>
+                         </div>
+                        <!-- body (form) -->
+                          <div class="modal-body">
+							 <div class="tab-content">
+							     <div id="login" class="tab-pane fade in active">
+								     <form role="form">
+                                     <div class="form-group">
+                                     <input type="email" class="form-control" placeholder="Email">
+                                     </div>
+                                     <div class="form-group">
+                                     <input type="password" class="form-control" placeholder="Password">
+                                      </div>
+						
+									  <div  class="checkbox">
+									       <label><input type="checkbox"> Remember me</label>
+									  </div>
+                                     </form>
+								 </div>	
+								 <div style="display:none" id="signup" class="tab-pane fade in active">
+								     <form role="form">
+                                     <div class="form-group">
+                                     <input type="text" class="form-control" placeholder="Name">
+                                     </div>
+                                     <div class="form-group">
+                                     <input type="text" class="form-control" placeholder="Mob No.">
+                                     </div>
+									 <div class="form-group">
+                                     <input type="email" class="form-control" placeholder="Email">
+                                     </div>
+									 <div class="form-group">
+                                     <input type="password" class="form-control" placeholder="Password">
+                                     </div>
+									 <div class="form-group">
+                                     <input type="password" class="form-control" placeholder="Confirm Password">
+                                     </div>
+                                     </form>
+								 </div>
+							 </div>
+                         </div>                            
+                         <!-- button -->
+                         <div class="modal-footer">
+                             <button class="btn btn-primary btn-block">SignUp</button>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+			 <!-- End Of Login/SignUp modal -->
+			 <div class="container">
+                 <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+                     <fieldset>
+                        <!-- Form Name -->
+                         <legend>Get In Touch With Us</legend>
+                         <!-- Text input-->
+                         <div class="form-group">
+                             <label class="col-md-4 control-label">First Name</label>  
+                             <div class="col-md-4 inputGroupContainer">
+                             <div class="input-group">
+                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                             <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+                             </div>
+                             </div>
+                         </div>
+                         <!-- Text input-->
+                         <div class="form-group">
+                             <label class="col-md-4 control-label" >Last Name</label> 
+                             <div class="col-md-4 inputGroupContainer">
+                             <div class="input-group">
+                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                             <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+                             </div>
+                             </div>
+                         </div>
+                        <!-- Text input-->
+                         <div class="form-group">
+                             <label class="col-md-4 control-label">E-Mail</label>  
+                             <div class="col-md-4 inputGroupContainer">
+                             <div class="input-group">
+                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                             <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+                             </div>
+                             </div>
+                         </div>
+                         <!-- Text input-->     
+                         <div class="form-group">
+                             <label class="col-md-4 control-label">Phone #</label>  
+                             <div class="col-md-4 inputGroupContainer">
+                             <div class="input-group">
+                             <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                             <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+                             </div>
+                             </div>
+                         </div>
+                         <!-- Text area -->
+                         <div class="form-group">
+                             <label class="col-md-4 control-label">Message</label>
+                             <div class="col-md-4 inputGroupContainer">
+                             <div class="input-group">
+                             <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+        	                 <textarea class="form-control" name="comment" placeholder="Message"></textarea>
+                             </div>
+                             </div>
+                         </div>
+                         <!-- Success message -->
+                         <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+                        <!-- Button -->
+                         <div class="form-group">
+                             <label class="col-md-4 control-label"></label>
+                             <div class="col-md-4">
+                             <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
+                              </div>
+                         </div>
+                     </fieldset>
+                 </form>
+             </div> <!-- /.container -->		 
+             <footer class="site-footer">
+			     <div class="container">			     
+				     <p>Follow Us On</p>
+					 <div class="row">
+					 <div class="col-md-4">
+					 <ul class="footer-menu">
+					     <li>
+						     <a href="#">Facebook</a>
+						 </li>
+						 <li>
+						     <a href="#">Twitter</a>
+						 </li>
+						 <li>
+						     <a href="#">Google +</a>
+						 </li>
+					 </ul>
+					 </div>
+					 <div class="col-md-8">
+					     <p>Copyright &copy; THEBOOKSTORE 2017</p>
+					 </div>
+					 </div>
+				 </div>
+			 </footer>
+		
+   </body>
+</html>
