@@ -1,0 +1,50 @@
+body{
+	background-image:url('images/bg.jpg');
+}
+#page-content{
+	padding:30px;
+}
+.site-footer{
+	background:black;
+	color:white;
+	margin-top:80px;
+	
+}
+#jumbotron h1{
+	margin-left:20px;
+}
+#jumbotron p{
+	margin-left:20px;
+}
+.site-footer p{
+	padding:20px;
+}
+.footer-menu{
+	list-style:none;
+}
+.footer-menu li a{
+	color:white;
+	font-weight:bold;
+	text-decoration:none;
+	line-height:30px;
+}
+#success_message{ display: none;}
+
+.row{
+	padding:70px;
+}
+.row a{
+	text-decoration:none;
+}
+#row1 img{
+	 padding:10px;
+}
+#row2 img{
+	 padding:10px;
+}
+#row3 img{
+	 padding:10px;
+}
+#row4 img{
+	 padding:10px;
+}
